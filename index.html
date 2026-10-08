@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Roadmap A1 Exam</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins','Cairo',sans-serif;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);min-height:100vh;padding:20px;color:#1e293b;background-attachment:fixed}
+.C{max-width:1100px;margin:0 auto}
+.hero{background:rgba(255,255,255,.95);border-radius:24px;padding:40px;text-align:center;box-shadow:0 25px 50px rgba(0,0,0,.2);margin-bottom:30px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(99,102,241,.1),transparent);animation:sh 3s infinite}
+@keyframes sh{0%{transform:translateX(-100%) translateY(-100%) rotate(45deg)}100%{transform:translateX(100%) translateY(100%) rotate(45deg)}}
+.hero h1{font-size:2.5em;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;position:relative;z-index:1}
+.teacher{display:block;font-size:2.5em;font-weight:800;color:#f59e0b;font-family:'Poppins',sans-serif;position:relative;z-index:1;margin-top:10px;text-shadow:2px 2px 4px rgba(0,0,0,.1)}
+.arT{font-family:'Cairo',sans-serif;font-size:1.5em;color:#4f46e5;font-weight:700;position:relative;z-index:1;margin-bottom:5px}
+.cenB{display:block;font-family:'Cairo',sans-serif;font-size:1.3em;font-weight:900;color:#4f46e5;position:relative;z-index:1;margin-bottom:5px}
+.hero p{color:#64748b;font-size:1em;position:relative;z-index:1}
+.sb{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:20px 0;position:relative;z-index:1}
+.sc{background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:12px;border-radius:16px;text-align:center;border:2px solid rgba(99,102,241,.1);transition:transform .3s}
+.sc:hover{transform:translateY(-3px)}
+.sv{font-size:1.8em;font-weight:800;color:#4f46e5}
+.sl{font-size:.8em;color:#64748b;font-weight:500}
+.pc{background:#e2e8f0;height:10px;border-radius:10px;overflow:hidden;margin:15px 0;position:relative;z-index:1}
+.pb{height:100%;background:linear-gradient(90deg,#10b981,#34d399);border-radius:10px;width:0%;transition:width .5s}
+.sec{background:rgba(255,255,255,.95);border-radius:20px;padding:25px;margin-bottom:20px;box-shadow:0 15px 35px rgba(0,0,0,.15)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:15px;border-bottom:3px solid #6366f1}
+.si{width:50px;height:50px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5em;color:#fff}
+.st h2{font-size:1.3em;color:#1e293b}
+.st .as{font-family:'Cairo',sans-serif;color:#4f46e5;font-size:.9em;font-weight:600}
+.sp{float:right;background:#e2e8f0;padding:4px 10px;border-radius:20px;font-size:.8em;font-weight:600;color:#64748b}
+.q{background:linear-gradient(135deg,#f8fafc,#fff);border:2px solid #e2e8f0;border-radius:14px;padding:16px;margin-bottom:16px;transition:all .3s}
+.q:hover{border-color:#6366f1;box-shadow:0 5px 15px rgba(99,102,241,.1)}
+.q.ac{border-color:#10b981;background:linear-gradient(135deg,#ecfdf5,#fff)}
+.q.aw{border-color:#ef4444;background:linear-gradient(135deg,#fef2f2,#fff)}
+.qn{display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:.8em;margin-bottom:10px}
+.qt{font-size:1.05em;font-weight:600;color:#1e293b;margin-bottom:12px;line-height:1.5}
+.ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.op{background:#fff;border:2px solid #e2e8f0;border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .3s;font-size:.95em;font-weight:500;display:flex;align-items:center;gap:8px}
+.op:hover:not(.dis){border-color:#6366f1;background:#eef2ff;transform:translateX(3px)}
+.ol{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8em;flex-shrink:0}
+.op.ok{background:linear-gradient(135deg,#d1fae5,#a7f3d0);border-color:#10b981;color:#065f46;animation:pc .5s}
+.op.ok .ol{background:#10b981}
+.op.wr{background:linear-gradient(135deg,#fee2e2,#fecaca);border-color:#ef4444;color:#991b1b;animation:sk .5s}
+.op.wr .ol{background:#ef4444}
+.op.dis{cursor:not-allowed;opacity:.6}
+.op.sc{background:linear-gradient(135deg,#d1fae5,#a7f3d0);border-color:#10b981;color:#065f46}
+@keyframes pc{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@keyframes sk{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;display:none;animation:fi .4s}
+.fb.show{display:block}
+.fb.ok{background:linear-gradient(135deg,#d1fae5,#ecfdf5);border-left:4px solid #10b981}
+.fb.wr{background:linear-gradient(135deg,#fee2e2,#fef2f2);border-left:4px solid #ef4444}
+@keyframes fi{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.fe{font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.fa{font-family:'Cairo',sans-serif;direction:rtl;text-align:right;color:#1e293b;font-size:.9em;line-height:1.7;padding-top:6px;border-top:1px dashed rgba(0,0,0,.1)}
+.rpt{background:linear-gradient(135deg,#1e293b,#334155);color:#fff;border-radius:24px;padding:35px;margin-top:30px;margin-bottom:30px;box-shadow:0 25px 50px rgba(0,0,0,.3);display:none;position:relative;overflow:hidden}
+.rpt.show{display:block;animation:fi .8s}
+.rh{text-align:center;margin-bottom:25px;position:relative;z-index:1}
+.rh h2{font-size:1.8em;background:linear-gradient(90deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.rh p{font-family:'Cairo',sans-serif;font-size:1.1em;color:#cbd5e1}
+.mc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;margin-bottom:12px;transition:transform .3s;position:relative;z-index:1}
+.mc:hover{transform:translateX(4px);background:rgba(255,255,255,.08)}
+.mq{color:#e2e8f0;font-weight:600;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed rgba(255,255,255,.2)}
+.mw{color:#fca5a5;font-weight:600;margin-bottom:4px}
+.mr{color:#6ee7b7;font-weight:700;margin-bottom:8px}
+.me{font-family:'Cairo',sans-serif;direction:rtl;text-align:right;color:#e2e8f0;font-size:.9em;line-height:1.6;border-top:1px dashed rgba(255,255,255,.2);padding-top:8px}
+.fr{background:rgba(255,255,255,.95);border-radius:24px;padding:40px;text-align:center;box-shadow:0 25px 50px rgba(0,0,0,.2);margin-top:25px;display:none}
+.fr.show{display:block;animation:fi .8s}
+.re{font-size:4em;margin-bottom:15px;animation:bn 1s infinite}
+@keyframes bn{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+.rs{font-size:3.5em;font-weight:900;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:15px 0}
+.btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:12px 30px;border-radius:50px;font-size:1em;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 8px 20px rgba(99,102,241,.4);font-family:inherit;margin:5px}
+.btn:hover{transform:translateY(-2px)}
+.br{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 8px 20px rgba(245,158,11,.4)}
+.bg{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 8px 20px rgba(16,185,129,.4)}
+.stp{position:fixed;bottom:25px;right:25px;width:50px;height:50px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:1.3em;box-shadow:0 8px 20px rgba(99,102,241,.4);display:none;z-index:1000}
+.stp.show{display:block}
+@media(max-width:768px){.hero h1,.teacher{font-size:1.6em}.arT{font-size:1.1em}.ops{grid-template-columns:1fr}.sec,.rpt{padding:15px}.rs{font-size:2.5em}}
+</style></head><body>
+<div class="C">
+<div class="hero">
+<h1>🌟 Roadmap A1 Exam</h1>
+<div class="arT">اختبار الميد الأول - الوحدات 1-6</div>
+<div class="cenB">مركز الرواد التعليمي</div>
+<div class="teacher">👨‍🏫 Prepared by: Mr. Islam Saber</div>
+<p style="margin-top:15px">Interactive Self-Correcting Exam • 200 Questions</p>
+<div class="sb">
+<div class="sc"><div class="sv" id="tQ">200</div><div class="sl">Total<br>إجمالي</div></div>
+<div class="sc"><div class="sv" id="aQ">0</div><div class="sl">Answered<br>تمت</div></div>
+<div class="sc"><div class="sv" id="cQ">0</div><div class="sl">Correct ✓<br>صحيح</div></div>
+<div class="sc"><div class="sv" id="wQ">0</div><div class="sl">Wrong ✗<br>خطأ</div></div>
+</div>
+<div class="pc"><div class="pb" id="pB"></div></div>
+<p style="font-size:.85em;color:#64748b" id="pT">0% • ابدأ الإجابة الآن</p>
+</div>
+<div id="qC"></div>
+<div class="fr" id="fR">
+<div class="re" id="rE">🎉</div>
+<div style="font-size:1.2em;font-weight:600;margin-bottom:8px" id="rM">Excellent!</div>
+<div style="font-family:'Cairo';font-size:1.4em;color:#4f46e5;font-weight:700;margin-bottom:15px" id="rA">ممتاز!</div>
+<div class="rs" id="rS">0/200</div>
+<p style="color:#64748b;margin-bottom:20px" id="rP">0%</p>
+<button class="btn br" onclick="showRpt()">📊 Generate Report • توليد التقرير</button>
+<button class="btn bg" onclick="reset()">🔄 Retake • أعد</button>
+</div>
+<div class="rpt" id="rSec">
+<div class="rh"><h2>📊 Performance Report</h2><p>تقرير الأخطاء التي وقعت فيها لتصحيحها</p></div>
+<div id="rCon"></div>
+</div>
+</div>
+<button class="stp" id="sT" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const SN=["","Verb 'to be' • فعل الكينونة","Possessives & Numbers • الملكية والأرقام","There is/are & Places • يوجد والأماكن","Have got & Time • الملكية والوقت","Present Simple (I/you/we/they) • المضارع البسيط","Present Simple (he/she/it) • التصريف الثالث","Can/Can't Extended • القدرة الموسعة","Vocabulary • المفردات","Functional Language • التواصل","Word Order • ترتيب الكلمات"];
+const D=`I ___ from Bahrain.|am|is|are|be|0|1|am مع I
+Ahmad ___ a student.|am|is|are|be|1|1|is مع المفرد
+We ___ happy.|are|is|am|be|0|1|are مع We
+___ your names Sarah?|Is|Am|Are|Be|2|1|Are مع الجمع
+My mother is ___ engineer.|a|an|the|some|1|1|an قبل حرف صوتي
+Where ___ you from?|am|is|are|be|2|1|are مع you
+They ___ my friends.|is|am|are|be|2|1|are مع They
+___ he a doctor? No, he ___.|Is/isn't|Are/aren't|Is/aren't|Are/isn't|0|1|Is و isn't مع he
+I ___ late.|am not|isn't|aren't|not|0|1|am not مع I
+My brother and I ___ from Egypt.|is|am|are|be|2|1|تعادل We فنستخدم are
+___ your father a teacher?|Am|Is|Are|Be|1|1|Is مع المفرد
+No, she ___. She is a nurse.|isn't|aren't|am not|not|0|1|isn't مع she
+Where ___ Ali and Jamal from?|is|am|are|be|2|1|جمع نستخدم are
+This ___ my sister.|am|is|are|be|1|1|This مفرد نستخدم is
+___ I in the right classroom?|Am|Is|Are|Be|0|1|Am مع I
+The hospital ___ small.|am|is|are|be|1|1|مفرد نستخدم is
+You ___ my best friend.|am|is|are|be|2|1|are مع You
+___ they from Turkey?|Am|Is|Are|Be|2|1|Are مع they
+My parents ___ at home.|is|am|are|be|2|1|جمع نستخدم are
+___ your name Ahmed?|Am|Is|Are|Be|1|1|Is مع المفرد
+This is ___ book.|my|your|his|her|0|2|my تعني كتابي
+___ boys over there.|This|That|These|Those|3|2|Those لجمع بعيد
+What is ___ name? (female)|his|her|its|your|1|2|her للإناث
+We love ___ new house.|my|your|his|our|3|2|our تعني منزلنا
+Ali and Jamal... ___ address|His|Her|Their|Our|2|2|Their للجمع
+___ is my computer.|This|These|Those|They|0|2|This لمفرد قريب
+My sister has a cat. ___ name is Luna.|His|Her|Its|Their|2|2|Its للحيوانات
+Are ___ your keys?|this|that|these|it|2|2|these لجمع قريب
+___ phone number is 050...|My|I|Me|Mine|0|2|My صفة ملكية
+My brother's wife is my ___.|aunt|sister|sister-in-law|mother|2|2|زوجة الأخ
+My father's father is my ___.|uncle|grandfather|brother|cousin|1|2|والد والدي = جد
+How spell 'fourteen'?|fourty|fourteen|forty|forteen|1|2|التهجئة الصحيحة 14
+100 in English is ___.|a thousand|a hundred|ten|ninety|1|2|100 = a hundred
+A: ___ is this book? B: 5 dinars.|How many|How much|What|Where|1|2|How much للسعر
+Which number is 'forty'?|14|4|40|400|2|2|forty = 40
+This is ___ umbrella.|a|an|the|some|1|2|an قبل حرف صوتي
+What's ___ job? (man)|his|her|its|your|0|2|his للذكور
+___ girls are my classmates.|This|That|These|Those|2|2|These لجمع قريب
+My uncle's son is my ___.|aunt|cousin|nephew|brother|1|2|ابن العم = cousin
+13 in English is ___.|thirty|three|thirteen|thirtyteen|2|2|13 = thirteen
+___ a supermarket near my house.|There is|There are|Is there|Are there|0|3|There is للمفرد
+___ any hotels in this town.|There is|There are|There aren't|There isn't|2|3|There aren't لنفي الجمع
+___ three cafes on this street.|There is|There are|Is there|Are there|1|3|There are للجمع
+___ a park near here? Yes, there is.|Is there|Are there|There is|There are|0|3|Is there للسؤال المفرد
+How many bedrooms ___ in your flat?|is there|are there|there is|there are|1|3|are there مع الجمع
+There is ___ old cinema.|a|an|the|zero|1|3|an قبل حرف صوتي
+This town is very ___. Many people.|quiet|small|busy|cheap|2|3|busy = مزدحم
+The hotel is not cheap. It is ___.|expensive|small|quiet|new|0|3|عكس cheap = expensive
+My flat is not big. It is ___.|large|small|expensive|busy|1|3|عكس big = small
+There ___ two good restaurants.|is|are|am|be|1|3|There are للجمع
+Go straight and ___ left.|turn|go|walk|come|0|3|turn left = انعطف يساراً
+The cinema is ___ the bank.|opposite|next to|between|behind|1|3|next to = بجوار
+There is a cafe ___ there isn't a supermarket.|and|but|or|so|1|3|but للتناقض
+Is there ___ wifi?|a|an|any|zero|2|3|any في السؤال
+___ a shower in the bathroom?|Is there|Are there|There is|There are|0|3|Is there للمفرد
+There are no ___ in my village.|supermarket|supermarkets|a supermarket|any shop|1|3|no + جمع
+The shops are very ___. Little money.|expensive|cheap|bad|old|1|3|cheap = رخيص
+The bank is ___ the park and the hotel.|opposite|next to|between|behind|2|3|between = بين
+Turn ___ at the traffic lights.|left|right|up|down|1|3|right = يمين
+Go ___ Main Street.|down|up|in|on|0|3|Go down = امش في
+I ___ got a new phone.|has|have|am|is|1|4|have got مع I
+She ___ got blue eyes.|have|has|is|are|1|4|has got مع She
+___ your brother got a car?|Have|Has|Is|Does|1|4|Has مع المفرد
+We ___ got any children.|hasn't|haven't|don't|doesn't|1|4|haven't got مع We
+He is in his ___. (35yo)|20s|30s|40s|50s|1|4|35 = in his 30s
+___ your homework, please.|Do|Does|Doing|To do|0|4|الأمر بالفعل
+___ photos in the museum.|Don't take|Doesn't take|Not take|No take|0|4|النهي: Don't + فعل
+Please ___ down.|sits|sitting|sit|to sit|2|4|الأمر: فعل بدون تصريف
+Have you got ___ money?|a|an|any|some|2|4|any في السؤال
+It's 5:15. It's quarter ___ five.|half|to|at|past|3|4|past بعد
+It's 4:15. quarter ___ four.|past|to|at|in|0|4|past للدقائق الأولى
+It's 7:45. quarter ___ eight.|past|to|at|in|1|4|to للدقائق الأخيرة
+My uncle ___ got grey hair.|have|has|is|are|1|4|has got مع المفرد
+___ they got a big house?|Has|Have|Is|Are|1|4|Have مع they
+It's 4:30. ___ past four.|quarter|half|twenty|ten|1|4|half = النصف
+___ eat in the library.|Don't|Doesn't|Not|No|0|4|النهي: Don't
+I've got ___ umbrella.|a|an|the|some|1|4|an قبل حرف صوتي
+She hasn't got ___ car.|a|an|any|some|0|4|a في الإيجاب
+What time is it? ten ___ five.|past|to|at|in|1|4|to = قبل
+Go ___ the park.|to|at|in|on|0|4|Go to = اذهب إلى
+I ___ up at 7.|gets|get|getting|to get|1|5|get مع I بدون s
+We ___ breakfast at 8.|has|have|having|to have|1|5|have مع We
+They ___ to work by bus.|goes|go|going|to go|1|5|go مع They
+___ you like coffee?|Do|Does|Are|Is|0|5|Do مع you
+We ___ work on Saturdays.|doesn't|don't|aren't|isn't|1|5|don't مع We
+I ___ eat meat. Vegetarian.|always|usually|often|never|3|5|never = أبداً
+She ___ drinks tea. (100%)|never|sometimes|always|rarely|2|5|always = دائماً
+How ___ do you go to the gym?|much|many|often|long|2|5|How often = كم مرة
+___ your parents drive to work?|Do|Does|Are|Is|0|5|Do مع الجمع
+What time ___ you leave home?|do|does|are|is|0|5|do مع you
+We ___ TV in the evening.|watches|watch|watching|to watch|1|5|watch مع We
+I travel ___ train.|on|in|by|with|2|5|by train = بالقطار
+I ___ go to the supermarket on Fridays.|usually|usually do|do usually|am usually|0|5|usually قبل الفعل
+I ___ sugar in my coffee.|doesn't have|don't have|not have|no have|1|5|don't have مع I
+A: What would you like? B: I'd ___ a coffee.|want|like|love|need|1|5|I'd like = أود
+___, I wake up. Then shower.|First|Then|Next|Finally|0|5|First = أولاً
+They ___ live in London.|don't|doesn't|aren't|isn't|0|5|don't مع They
+Do you ___ tennis?|play|plays|playing|to play|0|5|بعد Do الفعل
+We usually ___ lunch at 1.|has|have|having|to have|1|5|have مع We
+How often ___ you visit them?|do|does|are|is|0|5|do مع you
+My brother ___ in Riyadh.|live|lives|living|to live|1|6|lives مع he نضيف s
+She ___ English.|study|studies|studying|to study|1|6|study → studies
+He ___ watch TV.|don't|doesn't|isn't|aren't|1|6|doesn't مع He
+My father ___ dinner.|cook|cooks|cooking|to cook|1|6|cooks مع he
+The class ___ at 8:30.|start|starts|starting|to start|1|6|starts مع it
+___ your friend live in a house?|Do|Does|Is|Are|1|6|Does مع المفرد
+He ___ the bus. He walks.|don't take|doesn't take|isn't take|not take|1|6|doesn't take مع He
+My sister ___ her bed.|make|makes|making|to make|1|6|makes مع she
+What jobs ___ he do?|do|does|is|are|1|6|does مع he
+Ali ___ the dishes.|wash|washes|washing|to wash|1|6|wash → washes
+She ___ TV every evening.|watch|watchs|watches|watching|2|6|watch → watches
+He ___ to work by car.|go|goes|going|to go|1|6|goes مع he
+My mother ___ work on Fridays.|don't|doesn't|isn't|aren't|1|6|doesn't مع المفرد
+The shop ___ at 9 a.m.|open|opens|opening|to open|1|6|opens مع it
+He ___ his homework at night.|do|does|doing|to do|1|6|does مع he
+She ___ like spicy food.|don't|doesn't|isn't|aren't|1|6|doesn't للنفي مع she
+___ it rain a lot here?|Do|Does|Is|Are|1|6|Does مع it
+He always ___ late.|arrive|arrives|arriving|to arrive|1|6|arrives مع he
+The train ___ at 6 p.m|leave|leaves|leaving|to leave|1|6|leaves مع it
+She ___ to music every day.|listen|listens|listening|to listen|1|6|listens مع she
+My son ___ use the computer. Expresses ___.|can/ability|can/permission|can't/habit|can/past|0|7|can تعبر عن القدرة
+___ you speak two languages?|Does|Do|Can|Are|2|7|Can للسؤال عن القدرة
+Birds ___ fly, but penguins ___.|can/can|can/can't|can't/can|can't/can't|1|7|الطيور تستطيع، البطاريق لا
+He is 80. He ___ drive.|can|can't|doesn't|isn't|1|7|can't = لا يستطيع
+___ your mother cook? Yes, she ___.|Does/does|Can/can|Do/do|Is/is|1|7|Can و can
+She ___ play the piano.|can|cans|can to|canning|0|7|can لا تتصرف
+___ he swim? No, he ___.|Does/doesn't|Can/can't|Do/don't|Is/isn't|1|7|Can و can't
+I ___ build a website. IT student.|can|can't|does|do|0|7|can = أستطيع
+___ you help me?|Does|Do|Can|Are|2|7|Can للطلب
+___ you walk the dog?|Do|Does|Can|Are|2|7|Can للطلب بأدب
+___ you drive a car?|Do|Does|Can|Are|2|7|Can للقدرة
+Fish ___ walk, but they ___ swim.|can/can|can't/can|can/can't|can't/can't|1|7|السمك لا يمشي لكن يسبح
+I ___ speak Arabic and English.|can|can't|doesn't|isn't|0|7|can للقدرة
+___ your sister sing?|Does|Do|Can|Is|2|7|Can للقدرة
+Babies ___ walk. They crawl.|can|can't|don't|aren't|1|7|can't = لا يستطيعون
+What ___ you do? I can cook.|do|does|can|are|2|7|What can = ما المهارات
+My friend ___ play football.|can|cans|can to|caning|0|7|can لا تتصرف
+___ you use a computer? Yes, I ___.|Do/do|Can/can|Does/does|Are/am|1|7|Can و can
+Elephants ___ fly, but they ___ swim.|can/can|can't/can|can/can't|can't/can't|1|7|الفيلة لا تطير لكن تسبح
+___ he ride a horse? No, he ___.|Does/doesn't|Can/can't|Do/don't|Is/isn't|1|7|Can و can't
+I ___ draw pictures. I am an artist.|can|can't|don't|am not|0|7|can = أستطيع
+___ you make a cake? Yes, I ___.|Do/do|Can/can|Does/does|Are/am|1|7|Can و can
+Penguins ___ fly, but they ___ swim.|can/can|can't/can|can/can't|can't/can't|1|7|البطاريق لا تطير
+She ___ speak three languages.|can|can't|doesn't|isn't|0|7|can للقدرة
+___ your parents cook? Yes, they ___.|Do/do|Can/can|Does/does|Are/are|1|7|Can و can
+A dog ___ fly, but it ___ run.|can/can|can't/can|can/can't|can't/can't|1|7|الكلب لا يطير
+___ you play guitar? No, I ___.|Do/do|Can/can't|Does/does|Are/am|1|7|Can و can't
+I ___ speak Japanese. Only Arabic.|can|can't|don't|am not|1|7|can't = لا أستطيع
+___ she dance? Yes, she ___.|Does/does|Can/can|Do/do|Is/is|1|7|Can و can
+My brother ___ cook. He burns food!|can|can't|doesn't|isn't|1|7|can't = لا يستطيع
+He is from Japan. He is ___.|Japan|Japanese|Japanian|Japanes|1|8|Japanese = ياباني
+She is from Brazil. She is ___.|Brazilian|Brazilean|Brazillian|Brazil|0|8|Brazilian = برازيلي
+My mother's sister is my ___.|uncle|aunt|cousin|grandmother|1|8|أخت الأم = خالة
+Works in hospital, helps doctors:|teacher|nurse|pilot|farmer|1|8|nurse = ممرض
+Flies a plane:|driver|pilot|manager|writer|1|8|pilot = طيار
+Opens a door:|key|pen|cup|clock|0|8|key = مفتاح
+Know the time:|phone|computer|clock|desk|2|8|clock = ساعة
+My father's son:|brother|uncle|nephew|cousin|0|8|ابن والدي = أخ
+Works with students:|doctor|teacher|police|shop|1|8|teacher = معلم
+Sit on this:|table|chair|desk|box|1|8|chair = كرسي
+From Poland:|Polandish|Polish|Polander|Polandian|1|8|Polish = بولندي
+From Mexico:|Mexican|Mexicoan|Mexicano|Mexicana|0|8|Mexican = مكسيكي
+Serves food:|waiter|manager|receptionist|artist|0|8|waiter = نادل
+Buy bread/milk:|bank|supermarket|cinema|park|1|8|supermarket
+Borrow books:|bookshop|library|school|hotel|1|8|library = مكتبة
+Watch films:|park|cinema|cafe|bank|1|8|cinema = سينما
+Travel on sea:|bus|train|boat|taxi|2|8|boat = قارب
+Drink from beans:|tea|coffee|water|milk|1|8|coffee = قهوة
+Sleep in this room:|kitchen|bathroom|bedroom|living|2|8|bedroom = غرفة نوم
+Cook food in this room:|bedroom|kitchen|bathroom|hall|1|8|kitchen = مطبخ
+A: Phone number? B: ___|I am Ahmed.|It is 050...|I am from...|I am a...|1|9|الإجابة بالرقم
+A: How much is this book? B: ___|It is blue.|It is on table.|It is 5 dinars.|It is good.|2|9|الإجابة بالسعر
+A: Where is the cinema? B: ___|It is 5 dinars.|Go straight...|It is big.|Yes there is.|1|9|الإجابة بالاتجاه
+A: Can I pay by card? B: ___|Yes here is card.|No it is 5.|Yes cash or card.|Here is change.|2|9|cash or card
+A: What's your email? B: ___|It is 050...|It is ahmed@...|I am Ahmed.|I am from Oman.|1|9|الإجابة بالبريد
+A: Can you walk the dog? B: ___|Yes I can.|Yes I do.|No I don't.|Yes I am.|0|9|Can → Yes I can
+A: What time is the train? B: ___|Platform 1.|It is at 3:30.|It is fast.|It is expensive.|1|9|الإجابة بالوقت
+A: Would you like a drink? B: ___|Yes please. Water.|It is 2 dinars.|I am hungry.|No I don't.|0|9|Yes please
+A: How do you spell your name? B: ___|I am Ali.|A-L-I.|From Egypt.|I am 20.|1|9|التهجئة بحروف
+A: Is there a supermarket? B: ___|Yes there is one...|Yes I am.|No I don't.|It is expensive.|0|9|Yes there is
+A: What's your job? B: ___|I am from Spain.|I am a teacher.|I am 30.|I am happy.|1|9|الإجابة بالمهنة
+A: Can I use your computer? B: ___|Yes you can.|Yes I can.|No I don't.|Yes I am.|0|9|Can I → Yes you can
+A: How old are you? B: ___|I am from Bahrain.|I am a student.|I am 25 years old.|I am fine.|2|9|الإجابة بالعمر
+A: Where are you from? B: ___|I am a doctor.|I am from Saudi...|I am 20.|I am happy.|1|9|الإجابة بالبلد
+A: Are you late? B: ___|Yes I am.|Yes I do.|Yes I can.|Yes I have.|0|9|Are you → Yes I am
+Choose correct:|Our teacher is always on time.|Our teacher always is...|Always our teacher...|Is always our...|0|10|always بعد فعل be
+Choose correct:|She sometimes visits me.|She visits sometimes me.|Sometimes she me visits.|Visits she sometimes...|0|10|sometimes قبل الفعل
+Choose correct:|This is the book of my sister.|This is my sister's book.|This is my sisters book's.|This is my sister book.|1|10|'s للملكية
+Choose correct:|These are my sister's books.|These are my sister books'.|These are my sisters' book.|These are my sister's book.|0|10|'s للمفرد + جمع
+Choose correct:|I never eat breakfast.|I eat never breakfast.|Never I eat breakfast.|I don't never eat.|0|10|never قبل الفعل
+Choose correct:|He can to swim.|He can swim.|He cans swim.|He swimming can.|1|10|can + فعل بدون to
+Choose correct:|There is a big park.|There is big a park.|There a big park is.|Is there a big park.|0|10|There is + a + صفة + اسم
+Choose correct:|My friend hasn't got a car.|My friend haven't got...|My friend doesn't has got.|My friend not has got.|0|10|hasn't got مع المفرد
+Choose correct:|Does she works...?|Does she work...?|Do she work...?|She does work...?|1|10|بعد Does الفعل بدون s
+Choose correct:|We don't goes...|We doesn't go...|We don't go...|We not go...|2|10|don't + فعل بدون تصريف
+Choose correct:|I am usually late.|I usually am late.|Usually I am late.|I late am usually.|0|10|usually بعد be
+Choose correct:|He has got blue eyes.|He have got blue eyes.|He got has blue eyes.|He has blue eyes got.|0|10|He has got + صفات
+Choose correct:|Are there any cafes?|Is there any cafes?|There are any cafes?|Are there a cafes?|0|10|Are there any + جمع
+Choose correct:|My parents lives...|My parents live...|My parents living...|My parents is live...|1|10|parents جمع + فعل بدون s
+Choose correct:|Can you to speak?|Can you speaks?|Can you speak?|Do you can speak?|2|10|Can you + فعل بدون to أو s`.split('\n').map(r=>{let p=r.split('|');return{q:p[0],o:[p[1],p[2],p[3],p[4]],a:+p[5],s:+p[6],ar:p[7]}});
+let ans=new Set(),cor=0,wr=0,mist=[];
+const tot=D.length;
+document.getElementById('tQ').textContent=tot;
+function build(){const c=document.getElementById('qC');let h='',cs='',sn=0;
+D.forEach((it,i)=>{if(it.s!==cs){if(cs!=='')h+='</div>';cs=it.s;sn++;h+=`<div class="sec" id="s${sn}"><div class="sh"><div class="si">📚</div><div class="st"><h2>Section ${sn}</h2><div class="as">${SN[cs]}</div></div><div class="sp" id="p${sn}">0/0</div></div>`;}
+const L=['A','B','C','D'];h+=`<div class="q" id="q${i}"><div class="qn">Q${i+1}</div><div class="qt">${it.q}</div><div class="ops">${it.o.map((o,j)=>`<button class="op" onclick="sel(${i},${j})"><span class="ol">${L[j]}</span><span>${o}</span></button>`).join('')}</div><div class="fb" id="f${i}"></div></div>`;});
+if(cs!=='')h+='</div>';c.innerHTML=h;uP();}
+function uP(){const s={};D.forEach((it,i)=>{if(!s[it.s])s[it.s]={t:0,a:0};s[it.s].t++;if(ans.has(i))s[it.s].a++;});
+Object.keys(s).forEach((k,i)=>{const e=document.getElementById('p'+(i+1));if(e)e.textContent=s[k].a+'/'+s[k].t;});}
+function sel(i,si){if(ans.has(i))return;const it=D[i],qE=document.getElementById('q'+i),os=qE.querySelectorAll('.op'),fE=document.getElementById('f'+i);
+ans.add(i);const L=['A','B','C','D'];
+os.forEach((o,j)=>{o.classList.add('dis');if(j===it.a)o.classList.add(j===si?'ok':'sc');if(j===si&&j!==it.a)o.classList.add('wr');});
+if(si===it.a){cor++;qE.classList.add('ac');fE.classList.add('ok','show');fE.innerHTML=`<div class="fe">✅ Correct! أحسنت!</div><div class="fa">${it.ar}</div>`;}
+else{wr++;qE.classList.add('aw');fE.classList.add('wr','show');fE.innerHTML=`<div class="fe">❌ Incorrect. Correct: <strong>${L[it.a]}) ${it.o[it.a]}</strong></div><div class="fa">❌ إجابة خاطئة. الصحيحة: <strong>${it.o[it.a]}</strong><br>${it.ar}</div>`;
+mist.push({n:i+1,q:it.q,s:L[si]+') '+it.o[si],c:L[it.a]+') '+it.o[it.a],e:it.ar});}
+document.getElementById('aQ').textContent=ans.size;document.getElementById('cQ').textContent=cor;document.getElementById('wQ').textContent=wr;
+const p=(ans.size/tot)*100;document.getElementById('pB').style.width=p+'%';document.getElementById('pT').textContent=Math.round(p)+'% • '+ans.size+'/'+tot;uP();
+if(ans.size===tot)setTimeout(showF,800);}
+function showF(){const p=Math.round((cor/tot)*100);let em,ms,ar;
+if(p>=90){em='🏆';ms='Outstanding!';ar='أداء رائع! ممتاز!';}else if(p>=75){em='🌟';ms='Great Job!';ar='عمل رائع!';}else if(p>=60){em='👍';ms='Good Work!';ar='عمل جيد!';}else if(p>=40){em='📚';ms='Keep Practicing!';ar='واصل التدريب!';}else{em='💪';ms="Don't Give Up!";ar='لا تستسلم!';}
+document.getElementById('rE').textContent=em;document.getElementById('rM').textContent=ms;document.getElementById('rA').textContent=ar;
+document.getElementById('rS').textContent=cor+'/'+tot;document.getElementById('rP').textContent=p+'%';
+document.getElementById('fR').classList.add('show');document.getElementById('fR').scrollIntoView({behavior:'smooth'});}
+function showRpt(){const s=document.getElementById('rSec'),c=document.getElementById('rCon');
+if(mist.length===0){c.innerHTML='<div style="text-align:center;padding:40px;position:relative;z-index:1"><div style="font-size:4em;margin-bottom:15px">🎉</div><div style="font-size:1.5em;color:#6ee7b7;font-weight:700">Perfect Score! No Mistakes!</div><p style="color:#cbd5e1;margin-top:10px;font-family:Cairo">درجة كاملة! لا توجد أخطاء!</p></div>';}
+else{let h=`<p style="color:#fbbf24;text-align:center;margin-bottom:15px;font-size:1.05em">You made ${mist.length} mistake(s) • وقعت في ${mist.length} خطأ</p>`;
+mist.forEach(m=>{h+=`<div class="mc"><div class="mq">Q${m.n}: ${m.q}</div><div class="mw">❌ Your answer: ${m.s}</div><div class="mr">✅ Correct: ${m.c}</div><div class="me">${m.e}</div></div>`;});c.innerHTML=h;}
+s.classList.add('show');s.scrollIntoView({behavior:'smooth'});}
+function reset(){ans.clear();cor=0;wr=0;mist=[];document.getElementById('fR').classList.remove('show');document.getElementById('rSec').classList.remove('show');build();
+document.getElementById('aQ').textContent=0;document.getElementById('cQ').textContent=0;document.getElementById('wQ').textContent=0;
+document.getElementById('pB').style.width='0%';document.getElementById('pT').textContent='0% • ابدأ الإجابة الآن';window.scrollTo({top:0,behavior:'smooth'});}
+window.addEventListener('scroll',()=>{const b=document.getElementById('sT');if(window.scrollY>500)b.classList.add('show');else b.classList.remove('show');});
+build();
+</script></body></html>
